@@ -1,12 +1,45 @@
 .repeat5-1fr {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .repeat5-1fr {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .repeat2-1fr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
 }
+
+@media (max-width: 768px) {
+    .repeat2-1fr {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.languages {
+    display: flex;
+  }
+
+  .languages li {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .languages {
+      flex-direction: column;
+    }
+
+    .languages li {
+      margin-right: 0;
+      list-style-type: disc;
+    }
+  }
 
 hr {
     height: 5px;
@@ -54,7 +87,6 @@ body {
     object-fit: cover;
 }
 
-/* Contact Info Section */
 .contact-info {
     display: flex;
     align-items: center;
@@ -77,4 +109,33 @@ body {
     width: 30px;
     height: 30px;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .contact-item {
+        font-size: 14px;
+        justify-content: center;
+    }
 }
